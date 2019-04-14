@@ -1,6 +1,6 @@
 # systemsetup
 res/xml/preference.xml
-...
+```
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
     <PreferenceCategory
@@ -70,4 +70,25 @@ res/xml/preference.xml
         </CheckBoxPreference>
     </PreferenceCategory>
 </PreferenceScreen>
-...
+```
+MainActivity.java
+```
+package com.example.win.systemsetup;
+
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+
+public class MainActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+       // setContentView(R.layout.activity_main);
+
+        getFragmentManager().beginTransaction()
+                .replace(android.R.id.content, new SettingsFragment())
+                .commit();
+
+    }
+}
+```
