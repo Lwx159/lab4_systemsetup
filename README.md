@@ -1,4 +1,5 @@
 # systemsetup
+运行截图在 Img文件夹中
 res/xml/preference.xml
 ```
 <?xml version="1.0" encoding="utf-8"?>
